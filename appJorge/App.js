@@ -1,9 +1,17 @@
 import React, { Component } from 'react';
 import {AppRegistry, StyleSheet, View, Image, Text, TouchableOpacity } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
+import SplashScreen from 'react-native-splash-screen';
 import { white } from 'chalk';
 
 export default class DisplayAnImage extends Component {
+
+  componentDidMount() {
+    // do stuff while splash screen is shown
+      // After having done stuff (such as async tasks) hide the splash screen
+      SplashScreen.hide();
+  }
+
   render() {
     const image = 'https://freesvg.org/img/david-bowie-maze-online-casino-real-money-art.png'
     const name = 'David Bowin'
